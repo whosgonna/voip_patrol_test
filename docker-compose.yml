@@ -7,8 +7,8 @@ services:
             - 5060:5060/udp
         volumes: 
             - ./uas:/uas
-        entrypoint: sh
-        tty: true
+        entrypoint: /git/voip_patrol/voip_patrol --conf /uas/basic_server.xml --port 5060 --log-level-console 10
+        #tty: true
 
     uac:
         image: whosgonna/voip_patrol
