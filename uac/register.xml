@@ -1,0 +1,15 @@
+<config>
+  <actions>
+    <!-- note: proxy param to send to a proxy -->
+    <action type="register" label="register UAS"
+            transport="udp"
+            account="1234"
+            username="1234"
+            password="1234"
+            proxy="uas"
+            registrar="uas"
+            expected_cause_code="200"
+    />
+    <action type="wait" complete="true"/>
+  </actions>
+</config>

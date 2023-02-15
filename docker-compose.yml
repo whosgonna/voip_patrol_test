@@ -1,0 +1,18 @@
+version: '3.9'
+services:
+
+    uas:
+        image: whosgonna/voip_patrol
+        ports: 
+            - 5060:5060/udp
+        volumes: 
+            - ./uas:/uas
+        entrypoint: sh
+        tty: true
+
+    uac:
+        image: whosgonna/voip_patrol
+        volumes: 
+            - ./uac:/uac
+        entrypoint: sh
+        tty: true
