@@ -2,7 +2,10 @@ version: '3.9'
 services:
 
     uas:
-        image: whosgonna/voip_patrol
+        #image: whosgonna/voip_patrol
+        build: 
+            context: .
+            dockerfile: ./Dockerfile
         ports: 
             - 5060:5060/udp
         volumes: 
@@ -11,7 +14,9 @@ services:
         #tty: true
 
     uac:
-        image: whosgonna/voip_patrol
+        #image: whosgonna/voip_patrol
+        build: 
+            context: .
         volumes: 
             - ./uac:/uac
         entrypoint: sh
