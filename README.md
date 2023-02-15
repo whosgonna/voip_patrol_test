@@ -1,5 +1,6 @@
-Access the uac client with
+Start docker compose and then access the uac client with
 ```
+docker compose up -d
 docker compose exec uac bash
 ```
 
